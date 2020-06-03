@@ -28,12 +28,7 @@ const Heading = () => (
 ```
 
 ```jsx
-<html>
-  <head>LLama UI</head>
-  <body>
-    <Heading />
-  </body>
-</html>
+<Heading />
 ```
 
 ### Component Props
@@ -47,19 +42,12 @@ const Heading = props => (
 ```
 
 ```jsx
-<html>
-  <head>LLama UI</head>
-  <body>
-    <Heading user={'SAMI'} />
-  </body>
-</html>
+<Heading user={'SAMI'} />
 ```
 
 ### Prop Types
 
 [React Docs](https://reactjs.org/docs/typechecking-with-proptypes.html)
-
-#### Heading.js
 
 ```js
 import React from 'react';
@@ -93,6 +81,8 @@ Heading.propTypes = {
 
 ### Component State
 
+[useState Docs](https://reactjs.org/docs/hooks-state.html)
+
 ```jsx
 import React, { useState } from 'react';
 import { string } from 'prop-types';
@@ -115,3 +105,23 @@ Heading.propTypes = {
 ```
 
 ### Application State
+
+Actions
+
+```js
+export const incrementCounter = { type: 'INCREMENT_COUNTER' };
+export const decrementCounter = { type: 'DECREMENT_COUNTER' };
+```
+
+Reducers
+
+```js
+'INCREMENT_COUNTER': () => ({
+  ...state,
+  counter: state.counter + 1
+}),
+'DECREMENT_COUNTER': () => ({
+  ...state,
+  counter: state.counter - 1
+}),
+```

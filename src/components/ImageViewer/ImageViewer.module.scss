@@ -1,0 +1,57 @@
+.imageViewer {
+  align-items: center;
+  display: flex;
+  font-family: sans-serif;
+  font-size: 14px;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  width: 100vw;
+  z-index: 5;
+}
+
+.imageViewer h1 {
+  background: black;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+  position: absolute;
+}
+
+.imageViewer img {
+  object-fit: contain;
+  height: 95%;
+  width: 95%;
+}
+
+.imageViewer .previousImage,
+.imageViewer .nextImage {
+  align-items: center;
+  color: transparent;
+  display: flex;
+  height: 100%;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  transition: 0.3s all;
+  width: 150px;
+  z-index: 15;
+}
+
+.imageViewer .previousImage {
+  left: -5px;
+}
+
+.imageViewer .nextImage {
+  right: -5px;
+}
+
+.imageViewer .previousImage:hover,
+.imageViewer .nextImage:hover {
+  background: white;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  text-align: center;
+}

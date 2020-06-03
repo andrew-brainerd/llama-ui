@@ -1,4 +1,4 @@
-# SAMI Intro to UI at LLamasoft
+# Intro to UI at LLamasoft
 
 [React Basics](./REACT.md)
 
@@ -20,19 +20,20 @@ Available for [Chrome](https://chrome.google.com/webstore/detail/react-developer
 
 ## Getting Started
 
-### Create a basic React app using Create React App
-
-```none
-> npx create-react-app llama-ui --use-npm
-```
-
 ### Open the app in VS Code
 
 ```none
-> code llama-ui
+> cd /c/projects/llama-ui
+> code .
 ```
 
-### Run the initial project
+### Install project dependencies
+
+```none
+> npm install
+```
+
+### Run the project
 
 ```none
 > npm start
