@@ -22,7 +22,7 @@ JSX
 ```js
 import React from 'react';
 
-const Header = () => (
+const Heading = () => (
   <h1>Hello LLamas!</h1>
 );
 ```
@@ -31,7 +31,7 @@ const Header = () => (
 <html>
   <head>LLama UI</head>
   <body>
-    <Header />
+    <Heading />
   </body>
 </html>
 ```
@@ -41,7 +41,7 @@ const Header = () => (
 ```js
 import React from 'react';
 
-const Header = props => (
+const Heading = props => (
   <h1>Hello {props.user}!</h1>
 );
 ```
@@ -50,7 +50,7 @@ const Header = props => (
 <html>
   <head>LLama UI</head>
   <body>
-    <Header user={'SAMI'} />
+    <Heading user={'SAMI'} />
   </body>
 </html>
 ```
@@ -59,17 +59,17 @@ const Header = props => (
 
 [React Docs](https://reactjs.org/docs/typechecking-with-proptypes.html)
 
-#### Header.js
+#### Heading.js
 
 ```js
 import React from 'react';
 import { string } from 'prop-types';
 
-const Header = props => (
+const Heading = props => (
   <h1>Hello {props.user}!</h1>
 );
 
-Header.propTypes = {
+Heading.propTypes = {
   user: string.isRequired
 };
 ```
@@ -82,11 +82,11 @@ Header.propTypes = {
 import React from 'react';
 import { string } from 'prop-types';
 
-const Header = ({ user }) => (
+const Heading = ({ user }) => (
   <h1>Hello {user}!</h1>
 );
 
-Header.propTypes = {
+Heading.propTypes = {
   user: string.isRequired
 };
 ```
@@ -97,7 +97,7 @@ Header.propTypes = {
 import React, { useState } from 'react';
 import { string } from 'prop-types';
 
-const Header = ({ user }) => {
+const Heading = ({ user }) => {
   const [count, setCount] = useState(0);
 
   return (
@@ -109,7 +109,7 @@ const Header = ({ user }) => {
   );
 };
 
-Header.propTypes = {
+Heading.propTypes = {
   user: string.isRequired
 };
 ```
