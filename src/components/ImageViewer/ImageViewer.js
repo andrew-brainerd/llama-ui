@@ -12,6 +12,10 @@ const ImageViewer = ({ isLoadingImage, image, loadImage }) => {
     loadImage();
   }, 5000);
 
+  useInterval(() => {
+    loadImage();
+  }, 5000);
+
   return (
     <div className={styles.imageViewer}>
       <img src={image.url} alt={image.url} />
