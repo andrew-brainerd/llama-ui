@@ -13,7 +13,8 @@ const map = (state = initialState, action) => {
     case LOADING_IMAGE:
       return {
         ...state,
-        isLoadingImage: true
+        isLoadingImage: true,
+        image: null
       };
     case IMAGE_LOADED:
       return {

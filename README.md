@@ -45,6 +45,44 @@ Available for [Chrome](https://chrome.google.com/webstore/detail/react-developer
 
 [Component Library Repository](https://github.llamasoft.com/dev/web-ui-components)
 
+#### Add Artifactory Package Source
+
+```none
+> npm config set @llamasoft:registry http://artifactory.llamadev.local:8081/artifactory/api/npm/npm-local/
+```
+
+### Install the Styles Package
+
+```none
+> npm install --save @llamasoft/styles
+```
+
+### Install the UI Button Package
+
+```none
+> npm install --save @llamasoft/ui-button
+```
+
+### Import the component style bundle
+
+```js
+import '@llamasoft/ui-button/bundle/bundle.css';
+```
+
+### Import the component
+
+```jsx
+import Button from '@llamasoft/ui-button';
+
+<Button
+  className={styles.randomizeButton}
+  qaId={'RandomizeLLama_ButtonQAId'}
+  onClick={() => loadImage()}
+>
+  Randomize
+</Button>
+```
+
 ## Other Resources
 
 ### LinkedIn Learning

@@ -6,10 +6,11 @@ import rootReducer from '../reducers';
 
 export const history = createBrowserHistory();
 
-export default function configureStore (initialState) {
-  return createStore(
+const configureStore = initialState =>
+  createStore(
     rootReducer(history),
     initialState,
     composeWithDevTools(applyMiddleware(thunk))
   );
-};
+
+export default configureStore;

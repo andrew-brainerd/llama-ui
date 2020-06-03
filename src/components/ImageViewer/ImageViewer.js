@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { bool, shape, string, func } from 'prop-types';
-import useInterval from '../../hooks/useInterval';
+import Button from '@llamasoft/ui-button';
 import styles from './ImageViewer.module.scss';
 
 const ImageViewer = ({ isLoadingImage, image, loadImage }) => {
@@ -8,18 +8,21 @@ const ImageViewer = ({ isLoadingImage, image, loadImage }) => {
     loadImage();
   }, [loadImage]);
 
-  useInterval(() => {
-    loadImage();
-  }, 5000);
-
-  useInterval(() => {
-    loadImage();
-  }, 5000);
-
   return (
-    <div className={styles.imageViewer}>
-      <img src={image.url} alt={image.url} />
-    </div>
+    <>
+      <div className={styles.imageViewer}>
+        {image.url && <img src={image.url} alt={image.url} />}
+      </div>
+      <div className={styles.viewerControls}>
+        <Button
+          className={styles.randomizeButton}
+          qaId={'RandomizeLLama_ButtonQAId'}
+          onClick={() => loadImage()}
+        >
+          Randomize
+        </Button>
+      </div>
+    </>
   );
 };
 

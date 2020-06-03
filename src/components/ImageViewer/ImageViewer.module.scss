@@ -4,54 +4,29 @@
   font-family: sans-serif;
   font-size: 14px;
   justify-content: center;
-  height: 100vh;
+  height: 95vh;
   overflow: hidden;
-  position: absolute;
+  // position: absolute;
   width: 100vw;
-  z-index: 5;
+  z-index: 0;
+
+  img {
+    object-fit: contain;
+    height: 95%;
+    width: 95%;
+  }
 }
 
-.imageViewer h1 {
-  background: black;
-  border-radius: 5px;
-  color: white;
-  padding: 10px;
-  position: absolute;
-}
-
-.imageViewer img {
-  object-fit: contain;
-  height: 95%;
-  width: 95%;
-}
-
-.imageViewer .previousImage,
-.imageViewer .nextImage {
-  align-items: center;
-  color: transparent;
+.viewerControls {
+  bottom: 10px;
   display: flex;
-  height: 100%;
-  opacity: 0.3;
-  position: absolute;
-  top: 0;
-  transition: 0.3s all;
-  width: 150px;
-  z-index: 15;
-}
+  justify-content: center;
+  // position: absolute;
+  width: 100%;
+  z-index: 1;
 
-.imageViewer .previousImage {
-  left: -5px;
-}
-
-.imageViewer .nextImage {
-  right: -5px;
-}
-
-.imageViewer .previousImage:hover,
-.imageViewer .nextImage:hover {
-  background: white;
-  color: white;
-  cursor: pointer;
-  font-size: 20px;
-  text-align: center;
+  .randomizeButton {
+    background: black;
+    transition: 0.3s all;
+  }
 }
